@@ -1,0 +1,134 @@
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
+
+.lt_aside{
+background-color: #222D32;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 999;
+  transition: all 1s;
+  
+  }
+  .lt_aside h3{
+    font-size: 18px;
+    background-color: #367FA9;
+    margin-top: 0;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+  }
+  .lt_aside .aside_info{
+    padding-top: 30px;
+    text-align: center;
+  }
+  .lt_aside .aside_info img{
+    width: 80px;
+    height: 80px;
+    display: block;
+    border-radius: 50%;
+    margin: 0 auto;
+
+  }
+  .lt_aside .aside_info p{
+    color: #fff;
+    background-image: linear-gradient(45deg,red, yellow);
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .lt_aside .aside_nav ul{
+    list-style: none;
+padding: 0;
+margin: 0;
+margin-top: 30px;
+
+  }
+  .lt_aside .aside_nav ul li a{
+    display: block;
+    padding-left: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-right: 3px solid transparent;
+  }
+  .lt_aside .aside_nav ul li a.twonav{
+    padding-left: 60px;
+    
+  }
+  .lt_aside .aside_nav ul li a.active{
+  background-color: #1D1F21;  
+  border-left: 3px solid #006699;
+  
+  }
+  .lt_aside .aside_nav ul li i{
+    margin-right: 5px;
+  }
+  .lt_aside .aside_nav ul li .child{
+    display: none;
+  }
+  a:link,
+  a:visited,
+  a:hover,
+  a:active{
+    text-decoration: none;
+  }
+
+
+
+  .lt_aside .aside_nav ul a{
+    color: #fff;
+  }
+
+
+
+  .lt_main{
+    width: 100%;
+    height: 100%;
+    padding-left: 150px;
+    padding-top: 50px;
+    position: relative;
+    transition: all 1s;
+    
+  }
+  .lt_main.sf{
+    padding-left: 0;
+  }
+  .lt_main .title.sf{
+    padding-left: 0; 
+  }
+  .lt_aside.sf{
+left: -150px;
+
+  }
+  .lt_main .title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    height: 50px;
+    width: 100%;
+    padding-left: 150px;
+    background-color: #3C8DBC;
+    transition: all 1s;
+    
+  }
+
+  .lt_main .title i{
+    display: block;
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+  }
+  .lt_main .main_info{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+  }

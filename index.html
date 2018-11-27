@@ -1,22 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>乐淘电商</title>
-  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./leb/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/comment.css">
+  <link rel="stylesheet" href="./leb/nprogress/nprogress.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
+
 <body>
+  <!-- 没有响应式所以很好办 -->
+  <!-- 左边固定，右边的再慢慢看 -->
+  <div class="lt_aside">
+    <div class="aside_header">
+      <h3>后台控制欢迎你</h3>
+    </div>
+    <div class="aside_info">
+      <img src="./images/哈哈哈.png" alt="">
+      <p>超级管理员</p>
+    </div>
+    <div class="aside_nav">
+      <ul>
+        <li>
+          <a href="#" class="active">
+            <i class="glyphicon glyphicon-user"></i>用户管理</a>
+        </li>
+        <li>
+          <a href="javascript:;" class="togglehidden">
+            <i class="glyphicon glyphicon-list"></i>分类管理</a>
+          <div class="child">
+            <a href="first.html" class="twonav ">一级分类</a>
+            <a href="secend.html" class="twonav">二级分类</a>
+          </div>
+
+        </li>
+        <li>
+          <a href="nav.html">
+            <i class="glyphicon glyphicon-tags"></i>商品管理</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <div class="lt_main">
+    <div class="title">
+      <a href="#" class="pull-left sf">
+        <i class="glyphicon glyphicon-align-justify"></i>
+      </a>
+      <a href="#" class="pull-right back">
+        <i class="glyphicon glyphicon-log-out"></i>
+      </a>
+
+    </div>
+
+    <div class="main_info">
+      <div class="mb">
+        <ol class="breadcrumb">
+          <li>
+            <a href="#">系统管理</a>
+          </li>
+          <li class="active">
+            <a href="#">用户管理</a>
+          </li>
+        </ol>
+      </div>
+
+
+    </div>
+
+  </div>
 
 
 
 
-  
   <script src="./leb/jquery/jquery.min.js"></script>
   <script src="./leb/bootstrap/js/bootstrap.min.js"></script>
   <script src="./leb/bootstrap-validator/js/bootstrapValidator.js"></script>
+  <script src="./js/comment.js"></script>
+  <script src="./leb/nprogress/nprogress.js"></script>
   <script src="./js/index.js"></script>
 </body>
+
 </html>
