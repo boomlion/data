@@ -12,7 +12,7 @@ $(document).ajaxStop(function(){
 
 $(function(){
   $('.togglehidden').click(function(){
-    $('.child').stop().slideToggle();
+    $(this).next().stop().slideToggle();
   })
 
 $('.sf').click(function(){
@@ -26,6 +26,23 @@ $('.lt_main').stop().toggleClass('sf');
 
 
 })
+
+
+//退出功能，你只要发送就行了
+$('.modal-footer .sure').click(function(){
+$.ajax({
+  url:'/employee/employeeLogout',
+  type:'get',
+  success:function(info){
+   if(info.success){
+     location.href="login.html"
+   }
+  }
+})
+
+})
+
+
 
 
 })

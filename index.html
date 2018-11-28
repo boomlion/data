@@ -15,6 +15,31 @@
 <body>
   <!-- 没有响应式所以很好办 -->
   <!-- 左边固定，右边的再慢慢看 -->
+
+
+
+  <div class="modal fade bs-example-modal-sm">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">系统温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            <i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台系统吗&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消 </button>
+          <button type="button" class="btn btn-primary sure">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="lt_aside">
     <div class="aside_header">
       <h3>后台控制欢迎你</h3>
@@ -26,7 +51,7 @@
     <div class="aside_nav">
       <ul>
         <li>
-          <a href="#" class="active">
+          <a href="user.html">
             <i class="glyphicon glyphicon-user"></i>用户管理</a>
         </li>
         <li>
@@ -52,7 +77,7 @@
       <a href="#" class="pull-left sf">
         <i class="glyphicon glyphicon-align-justify"></i>
       </a>
-      <a href="#" class="pull-right back">
+      <a href="#" class="pull-right back" data-toggle="modal" data-target=".bs-example-modal-sm">
         <i class="glyphicon glyphicon-log-out"></i>
       </a>
 
@@ -70,8 +95,14 @@
         </ol>
       </div>
 
+      <div class="info_left pull-left"></div>
+      <div class="info_right pull-right"></div>
+
+
 
     </div>
+
+    
 
   </div>
 
@@ -80,10 +111,13 @@
 
   <script src="./leb/jquery/jquery.min.js"></script>
   <script src="./leb/bootstrap/js/bootstrap.min.js"></script>
-  <script src="./leb/bootstrap-validator/js/bootstrapValidator.js"></script>
-  <script src="./js/comment.js"></script>
+  <script src="./leb/bootstrap-validator/js/bootstrapValidator.js"></script>  
+  <script src="./leb/echarts/echarts.min.js"></script>
   <script src="./leb/nprogress/nprogress.js"></script>
+  <script src="./js/comment.js"></script>
+  <script src="./js/isLogin.js"></script>
   <script src="./js/index.js"></script>
+  
 </body>
 
 </html>

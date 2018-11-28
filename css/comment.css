@@ -132,3 +132,14 @@ left: -150px;
     height: 100%;
     padding: 20px;
   }
+
+
+
+  @media  (min-width:768px){
+    .modal .modal-dialog{
+    width: 300px;
+    }
+  }
+  .modal .modal-dialog .modal-body{
+    color: #A94442
+  }
