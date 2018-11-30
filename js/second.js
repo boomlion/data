@@ -113,7 +113,7 @@ $(function () {
     done: function (e, data) {
       // console.log(data.result.picAddr)
       $('#lijiale').attr('src', data.result.picAddr);
-      // $('#lijiale').val(data.result.picAddr);
+      $('[name="brandLogo"]').val(data.result.picAddr);
       // console.log(this)
       $('#form').data("bootstrapValidator").updateStatus("brandLogo", "VALID")
 
@@ -125,15 +125,12 @@ $(function () {
   // 这个点击阻止事件，然后自己发
   $("#form").on('success.form.bv', function (e) {
     e.preventDefault();
-    var formdate=new FormData($('#form')[0]);
 
     $.ajax({
-      url: '/category/addTopCategory',
+      url: '/category/addSecondCategory',
       type: 'post',
       dataType: 'json',
-      data:'formdate',
-      contentType:false,
-      processData:false,
+      data:$('#form').serialize(),
       success: function (info) {
         console.log(info)
         if (info.success) {
