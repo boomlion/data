@@ -54,7 +54,7 @@ margin-top: 30px;
     padding-left: 40px;
     height: 40px;
     line-height: 40px;
-    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
   }
   .lt_aside .aside_nav ul li a.twonav{
     padding-left: 60px;
@@ -142,4 +142,13 @@ left: -150px;
   }
   .modal .modal-dialog .modal-body{
     color: #A94442
+  }
+
+  .mt_20{
+    margin-top: 20px;
+  }
+
+  .mr_20{
+    
+  margin-left: 20px;
   }

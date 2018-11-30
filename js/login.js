@@ -60,10 +60,10 @@ $(function () {
       success: function (res) {
         console.log(res)
         if (res.error === 1000) {
-          $(form).data('bootstrapValidator').updateStatus('username','INVALID','callback')
+          $('form').data('bootstrapValidator').updateStatus('username','INVALID','callback')
           return;
         } else if (res.error === 1001) {
-          $(form).data('bootstrapValidator').updateStatus('password','INVALID','callback')
+          $('form').data('bootstrapValidator').updateStatus('password','INVALID','callback')
           alert("密码不正确");
           return;
         }

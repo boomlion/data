@@ -8,7 +8,6 @@
   <title>乐淘电商</title>
   <link rel="stylesheet" href="./leb/bootstrap/css/bootstrap.css">
   <link rel="stylesheet" href="./css/comment.css">
-  <link rel="stylesheet" href="./leb/bootstrap-validator/css/bootstrapValidator.css">
   <link rel="stylesheet" href="./leb/nprogress/nprogress.css">
   <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -52,21 +51,21 @@
     <div class="aside_nav">
       <ul>
         <li>
-          <a href="user.html">
+          <a href="user.html" class="active">
             <i class="glyphicon glyphicon-user"></i>用户管理</a>
         </li>
         <li>
-          <a href="javascript:;" class=" togglehidden">
+          <a href="javascript:;" class="togglehidden">
             <i class="glyphicon glyphicon-list"></i>分类管理</a>
-          <div class="child" style="display:block">
-            <a href="first.html" class="twonav active">一级分类</a>
+          <div class="child">
+            <a href="first.html" class="twonav ">一级分类</a>
             <a href="secend.html" class="twonav">二级分类</a>
           </div>
 
         </li>
         <li>
           <a href="nav.html">
-            <i class="glyphicon glyphicon-tags"></i>商品管理</a>
+            <i class="glyphicon glyphicon-tags "></i>商品管理</a>
         </li>
       </ul>
 
@@ -95,84 +94,86 @@
           </li>
         </ol>
       </div>
-      <div>
-        <button data-toggle="modal" data-target=".bs-example-modal-sm">添加分类</button>
-      </div>
 
-      <table class="table table-bordered table-hover text-center mt_20">
+      <table class="table table-bordered table-hover">
         <thead>
           <tr>
-            <th style="width: 20%" class="text-center">序号</th>
-            <th style="width: 80%" class="text-center">一级分类</th>
-
+            <th>序号</th>
+            <th>用户名</th>
+            <th>手机号</th>
+            <th>状态</th>
+            <th>操作</th>
           </tr>
         </thead>
         <tbody>
-          <!-- 这是一个坑 -->
+          <!-- //老师说这个要埋个坑 -->
+
         </tbody>
       </table>
 
       <div class="text-right">
-        <ul id="telpage"></ul>
+        <ul id="telpage">
 
+        </ul>
       </div>
+
     </div>
 
   </div>
   <div class="modal fade bs-example-modal-sm" id="yespage">
     <div class="modal-dialog">
-
       <div class="modal-content">
-        <form class="form-horizontal" id="form">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <h4 class="modal-title">添加分类</h4>
-          </div>
-          <div class="modal-body">
-
-            <div class="form-group form-group has-feedback has-success">
-              <input type="text" id="myname" name="categoryName" class="form-control" placeholder="请输入一级分类">
-            </div>
-          </div>
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default no" data-dismiss="modal">取消 </button>
-            <button type="submit" class="btn btn-primary add">确定</button>
-          </div>
-
-        </form>
-
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+          <h4 class="modal-title">系统温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p>
+            <i class="glyphicon glyphicon-info-sign"></i>您确定要更改吗&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消 </button>
+          <button type="button" class="btn btn-primary yes">确定</button>
+        </div>
       </div>
-
     </div>
   </div>
 
+  <script type="text/html" id="teltbl">
+ {{each rows v i}}
+      <tr>
+          <td>{{i+1+(page-1)*size}}</td>
+          <td>{{v.username}}</td>
+          <td>{{v.mobile}}</td>
+          <td>{{v.isDelete==1?'正常':'已禁用'}}</td>
+          {{if v.isDelete==1}}
+          <td data-id={{v.id}}>
+            <button class="btn btn-danger" data-toggle="modal" data-target=".bs-example-modal-sm">禁用</button>
+          </td>
+          {{else}}
+          <td data-id={{v.id}}>
+              <button class="btn btn-success " data-toggle="modal" data-target=".bs-example-modal-sm">启用</button>
+            </td>
+            {{/if}}
+      </tr>
+ {{/each}}
+    </script>
 
 
-
-  <script type="text/html" id="onetbl">
-{{each rows v i}}
-<tr>
-    <td>{{i+1+(page-1)*size}}</td>
-    <td>{{v.categoryName}}</td>
-  </tr>
-
-{{/each}}
-</script>
 
 
   <script src="./leb/jquery/jquery.min.js"></script>
   <script src="./leb/bootstrap/js/bootstrap.min.js"></script>
   <script src="./leb/bootstrap-validator/js/bootstrapValidator.js"></script>
+  <script src="./leb/artTemplate/template-web.js"></script>
   <script src="./js/comment.js"></script>
   <script src="./leb/bootstrap-paginator/bootstrap-paginator.js"></script>
-  <script src="./leb/artTemplate/template-web.js"></script>
-  <script src="./leb/bootstrap-validator/js/bootstrapValidator.js"></script>
   <script src="./leb/nprogress/nprogress.js"></script>
   <script src="./js/isLogin.js"></script>
-  <script src="./js/first.js"></script>
+  <script src="./js/user.js"></script>
+
 </body>
 
 </html>

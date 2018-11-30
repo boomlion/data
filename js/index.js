@@ -1,5 +1,6 @@
 (function () {
   var myChart = echarts.init(document.querySelector('.main_info .info_left'));
+  // var myChart = echarts.init(document.getElementById('main'));
   option = {
     title: {
       text: '产品销售'
